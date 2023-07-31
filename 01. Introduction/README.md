@@ -20,26 +20,25 @@ Beberapa contoh struktur data umum meliputi:
 
 Tipe data Primitif mulai dikenal pada bahasa pemrograman prosedural seperti: Pascal, C, atau Basic. Dimana tipe data ini memiliki ukuran memori yang tetap dan pasti, diantaranya:
 
-- **Integer**: byte (8 byte), short (16 b), int (32 b), long (64 b)
-- **Floating point**: float (32 byte), double(64 b), decimal(128 b), bigDecimal (256 b)
+- **Integer**: byte (8 byte), short (16 byte), int (32 byte), long (64 byte)
+- **Floating point**: float (32 byte), double(64 byte), decimal(128 byte), bigDecimal (256 byte)
 - **Booleans**: boolean (1 bit)
 - **Character**: char (1 byte)
 
-### Tipe Data Abstrak (Obyek)
+### Tipe Data Abstrak (Objek)
 
-Tipe data Obyek mulai digunakan pada pemrograman prosedural pascal ataupun C dengan penggunaan tipe data abstrak dan pointer, yaitu record, struct untuk tipe data kelompok serta pointer untuk penciptaan tipe data dinamis. Pada perkembangannya bahasa pemrograman berorientasi obyek menggunakannya untuk tipe data Obyek dimulai pada bahasa pemrograman
-LISP dan kemudian disusul Java Tipe data ini dapat merepresentasikan kelompok tipe data dengan beragam tipe primitif yang bisa diciptakan secara dinamis.
+Tipe data Objek mulai digunakan pada pemrograman prosedural seperi pascal ataupun C dengan penggunaan tipe data abstrak dan pointer, yaitu record, struct untuk tipe data kelompok serta pointer untuk penciptaan tipe data dinamis. Pada perkembangannya bahasa pemrograman berorientasi objek menggunakannya untuk tipe data Objek dimulai pada bahasa pemrograman LISP dan kemudian disusul Java. Tipe data ini dapat merepresentasikan kelompok tipe data dengan beragam tipe data primitif yang bisa diciptakan secara dinamis.
 
 ### Tipe data Koleksi (Collection)
-Koleksi adalah tipe data yang berupa rangkaian atau kumpulan data ataupun obyek yang berindeks. Terdapat tiga tipe dasar koleksi di Java yaitu:
-1. **Array** , koleksi statis dengan ukuran tetap dan hanya bisa mengelompokkant ipe data yang sama.
-2. **List** , koleksi dinamis dengan ukuran adaptif dan bisa mengelompokkan tipe data yang sama ataupun berbeda
+Tipe data Koleksi adalah tipe data yang berupa rangkaian atau kumpulan data ataupun objek yang berindeks. Terdapat tiga tipe dasar koleksi di Java yaitu:
+1. **Array** , koleksi statis dengan ukuran tetap dan hanya bisa mengelompokkan tipe data yang sama.
+2. **List** , koleksi dinamis dengan ukuran adaptif dan bisa mengelompokkan tipe data yang sama ataupun berbeda.
 3. **Map** , koleksi dinamis dengan ukuran adaptif dan bisa mengelompokkan tipe data yang sama ataupun berbeda dengan menggunakan pasangan `<key, value>`.
 
 ### Pemrograman Java
-Java adalah salah satu bahasa pemrograman yang bersifat open source yang merupakan produk dari Sun Microsystem. Bahasa Java adalah bahasa modern yang telah diterima masyarakat komputasi dunia. Hampir semua perusahaan perangkat lunak dan komputer besar mendukung dan mengembangkan aplikasi sistem berbasis Java.
+Java merupkan salah satu bahasa pemrograman yang bersifat open source yang merupakan produk dari Sun Microsystem. Bahasa Java adalah bahasa modern yang telah diterima masyarakat komputasi dunia. Hampir semua perusahaan perangkat lunak dan komputer besar mendukung dan mengembangkan aplikasi sistem berbasis Java.
 
-Java adalah salah satu bahasa pemrogaman Multiplatform (Bisa berjalan di berbagai macam system operasi) karena pada dasarnya java mempunyai Jre (java runtime environment) atau dapat kita artikan sebagai mesin tersendiri untuk mengeksekusi binary code hasil dari compilasi program yang telah kita buat, bereda dengan bahasa pemrograman vb, c++ yang memanfaatkan komponen system dalam Windows untuk mengeksekusi binary code hasil kompilasi program.
+Java adalah salah satu bahasa pemrogaman Multiplatform (Bisa berjalan di berbagai macam system operasi) karena pada dasarnya java mempunyai JRE (Java Runtime Environment) atau dapat kita artikan sebagai mesin tersendiri untuk mengeksekusi binary code hasil dari kompilasi program yang telah kita buat. Berbeda dengan bahasa pemrograman VB, C++ yang memanfaatkan komponen system dalam Windows untuk mengeksekusi binary code hasil kompilasi program.
 
 Pada Tahun 1996, Sun Microsystem secara resmi merilis versi awal Java yang kemudian terus berkembang hingga muncul JDK 1.1 (Java Development Kit versi 1.1). Perkembangan terus dilakukan hingga muncul versi baru yang disebut Java 2. Perubahan utama antara versi sebelumnya adalah adanya Swing yang merupakan teknologi Graphical User Interface (GUI) yang
 mampu menghasilkan aplikasi desktop yang benar-benar baik.
@@ -50,18 +49,16 @@ mampu menghasilkan aplikasi desktop yang benar-benar baik.
 
 1. Download JDK di link berikut : 
     [JDK](https://www.oracle.com/id/java/technologies/downloads/#jdk19-windows)
-<br>
-<br>
 
 
 **Penganalan Java :**
 
-1. Variabel :
-    Format :
+1. **Variabel** : <br>
+    #### Format :
     ```
     tipe_data nama_variabel = nilai;
     ```     
-    Contoh :
+    #### Contoh :
     ```
     int myNum = 10;
     float myFloatNum = 5.99f;
@@ -92,7 +89,7 @@ mampu menghasilkan aplikasi desktop yang benar-benar baik.
     Menggunakan “scanner”
     Import library untuk scanner:
     ```
-    import java.util.Scanner;  // Import kelas Scanner
+    import java.util.Scanner;  //Import kelas Scanner
     ```
     Memanggil scanner:
     ```
