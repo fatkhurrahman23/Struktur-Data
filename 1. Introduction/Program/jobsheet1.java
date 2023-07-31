@@ -7,7 +7,7 @@ NIM		: 4.33.22.1.15
 
 import java.util.Scanner;
 
-class jobsheet1{
+public class jobsheet1{
 
 	public static void main(String[] args) {
 	Scanner inputan = new Scanner(System.in); 
