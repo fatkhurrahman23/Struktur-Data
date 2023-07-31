@@ -4,7 +4,7 @@
 
 Linked list adalah struktur data linier yang mencakup serangkaian node yang terhubung. Di sini, setiap node menyimpan data dan alamat node berikutnya. Misalnya Anda harus memulai di suatu tempat, kemudian Anda harus memberikan alamat node pertama dengan nama khusus yang disebut **HEAD**. Selain itu, simpul terakhir dalam daftar tertaut dapat diidentifikasi karena bagian berikutnya menunjuk ke **NULL**.
 
-(../images/1.png)
+![Tux, the Linux mascot] (/Struktur-data/02.\ Single\ Linked\ List/images/1.png)
 
 Linked lists terdiri dari beberapa jenis : Single, Double, and circular linked list.
 Single Linked List :
