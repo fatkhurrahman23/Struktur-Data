@@ -51,7 +51,7 @@ public class singleLinkedList{
 
 		if (currentNode != null && currentNode.data == key) {
 			list.head = currentNode.next;
-			System.out.println(key + " found and deleted ");S
+			System.out.println(key + " found and deleted ");
 			return list;
 		}
 
