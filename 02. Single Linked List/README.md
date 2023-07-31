@@ -6,119 +6,103 @@ Linked list adalah struktur data linier yang mencakup serangkaian node yang terh
 
 ![02. Single Linked List/images/1.png](https://github.com/fatkhurrahman23/Struktur-Data/blob/03b9b0b506cd77642403f84fce598bcbc3b06dab/02.%20Single%20Linked%20List/images/1.png)
 
-Linked lists terdiri dari beberapa jenis : Single, Double, and circular linked list.
-Single Linked List :
+Linked lists terdiri dari beberapa jenis : Single, Double, and Circular linked list.
 
-```
+**Single Linked List** :
+
 Mari kita lihat bagaimana setiap node dari Linked List direpresentasikan. Setiap simpul
 terdiri dari:
+
+- Item data
+- Alamat node lain
+
+Di Java, LinkedList dapat direpresentasikan sebagai kelas dan Node sebagai Class terpisah. Kelas LinkedList berisi referensi tipe Class Node
+
 ```
+static class Node{
+		int data;
+		Node next;
+
+		Node(int d){
+			data = d;
+			next = null;
+		}
+	}
 ```
-● Item data
-● Alamat node lain
-Di Java, LinkedList dapat direpresentasikan sebagai kelas dan Node sebagai Class terpisah.
-Kelas LinkedList berisi referensi tipe Class Node
-```
 
-Teori Creation and Insertion:
+**Teori Creation and Insertion:**
+Insertion dalam daftar dilakukan di akhir, yaitu node baru ditambahkan setelah node terakhir dari Linked List yang diberikan. Misalnya, jika Single Link List yang diberikan adalah `5->10->15->20->25` dan 30 akan dimasukkan, maka Single Link List menjadi `5->10->15->20->25->`.
 
-Insertion dalam daftar dilakukan di akhir, yaitu node baru ditambahkan setelah node
-terakhir dari Linked List yang diberikan. Misalnya, jika Single Link List yang diberikan
-adalah 5->10->15->20->25 dan 30 akan dimasukkan, maka Single Link List menjadi 5-
->10->15->20->25->.
+Karena Single Linked List biasanya diwakili oleh penunjuk kepalanya, ia harus melintasi daftar hingga simpul terakhir dan kemudian mengubah simpul berikutnya ke simpul terakhir ke simpul baru.
 
-Karena Single Link List biasanya diwakili oleh penunjuk kepalanya, ia harus melintasi
-daftar hingga simpul terakhir dan kemudian mengubah simpul berikutnya ke simpul
-terakhir ke simpul baru.
+![ilustrasi2](https://github.com/fatkhurrahman23/Struktur-Data/blob/b779831702e1935797821ca74319af352ad4658d/02.%20Single%20Linked%20List/images/2.png)
 
-Implementasi : Buat Project dengan nama LinkList.java
+Implementasi : Buat Project dengan nama singleLinkedList.java
 
 Buat Class Node didalamnya.
 
 Buat Constructor Node untuk memberikan nilai awal dari objek yang nanti dibuat.
 
 ```
-static class Node {
-```
-```
-int data;
-Node next;
-```
-```
-// Constructor
-Node(int d)
-{
-data = d;
-next = null;
-}
-}
+static class Node{
+		int data;
+		Node next;
+
+		Node(int d){
+			data = d;
+			next = null;
+		}
+	}
 ```
 Buat object head dengan dengan nilai awal null
 
 ```
 Node head; // head of list
 ```
-Buat Method Insert untuk menginputkan data di akhir list
+Buat method Insert untuk menginputkan data di akhir list
 
 ```
-public static LinkedList insert(LinkedList list, int data)
-{
-// Create a new node with given data
-```
+public static singleLinkedList insert(singleLinkedList list, int data){
+		Node new_node = new Node(data);
 
-```
-Node new_node = new Node(data);
-```
-```
-// If the Linked List is empty,
-// then make the new node as head
-if (list.head == null) {
-list.head = new_node;
-}
-else {
-// Else traverse till the last node
-// and insert the new_node there
-Node last = list.head;
-while (last.next != null) {
-last = last.next;
-}
-```
-```
-// Insert the new_node at last node
-last.next = new_node;
-}
-```
-```
-// Return the list by head
-return list;
-}
+		//If the Linked List is empty, then make the new node as head
+		if (list.head == null){
+			list.head = new_node;
+		} else {
+			//Else traverse till the last node and insert the new_node there
+			Node last = list.head;
+
+			while (last.next != null){
+				last = last.next;
+			}
+			//Insert the new_node at last node
+			last.next = new_node;
+		}
+		//return the list by head
+		return list;
+	}
 ```
 Buat Method Untuk Menampilkan list
 
 ```
-// Method to print the LinkedList.
-public static void printList(LinkedList list)
-{
-Node currNode = list.head;
-```
-```
-System.out.print("[HEAD] => ");
-```
-```
-// Traverse through the LinkedList
-while (currNode != null) {
-// Print the data at current node
-System.out.print(currNode.data + " => ");
-```
-```
-// Go to next node
-currNode = currNode.next;
-}
-System.out.println("[NULL]");
-}
+//Method to print the LinkedList
+	public static void printList(singleLinkedList list){
+		Node currentNode = list.head;
+
+		System.out.print("[HEAD] => ");
+
+		//Traverse through the LinkedList
+		while (currentNode != null) {
+			//Print the data at current node
+			System.out.print(currentNode.data + " => ");
+			//Go to next node
+			currentNode = currentNode.next;
+		}
+		System.out.println(" [NULL]"); 
+	}
 ```
 
-Bagian main :
+**Bagian main** :
 
 Buat Objek dari LinkedList
 
@@ -166,54 +150,40 @@ Untuk menghapus node dari daftar tertaut, lakukan langkah-langkah berikut.
        ● Dalam hal ini, tidak ada operasi yang perlu dilakukan.
 
 
-Gambaran Proses :
+**Gambaran Proses** : <br>
+![ilustrasi gambaran proses](https://github.com/fatkhurrahman23/Struktur-Data/blob/b779831702e1935797821ca74319af352ad4658d/02.%20Single%20Linked%20List/images/3.png)
+
+**Implementasi** :
+
+
+Buat Method deleteByKey
 
 ```
-Implementaasi :
+//Method untuk menghapus node dengan key yang diberikan
+	public static singleLinkedList deleteByKey(singleLinkedList list, int key){
+		//Simpan head node
+		Node currentNode = list.head, prev = null;
 ```
+
+**CASE 1**: If head node itself holds the key to be deleted
+
 ```
-Buat Method deleteBYKey
+if (currentNode != null && currentNode.data == key) {
+			list.head = currentNode.next; //Changed head
+			System.out.println(key + " found and deleted ");
+			return list; //return the updated List
+		}
 ```
+
+CASE 2: If the key is somewhere other than at head
+
 ```
-// Method to delete a node in the LinkedList by KEY
-public static LinkedList deleteByKey(LinkedList list, int key){
-// Store head node
-Node currNode = list.head, prev = null;
-```
-```
-//
-// CASE 1:
-// If head node itself holds the key to be deleted
-```
-```
-if (currNode != null && currNode.data == key) {
-list.head = currNode.next; // Changed head
-```
-```
-// Display the message
-System.out.println(key + " found and deleted");
-```
-```
-// Return the updated List
-return list;
-}
-```
-```
-//
-// CASE 2:
-// If the key is somewhere other than at head
-//
-```
-```
-// Search for the key to be deleted,
-// keep track of the previous node
-// as it is needed to change currNode.next
-while (currNode != null && currNode.data != key) {
-// If currNode does not hold key
-// continue to next node
-prev = currNode;
-currNode = currNode.next;
-}
+        //search for the key to be deleted, keep track of the previous node as we need to change currentNode.next
+		while (currentNode != null && currentNode.data != key){
+			// If currentNode does not hold key continue to next node
+			prev = currentNode;
+			currentNode = currentNode.next;
+		}
 ```
 ```
 // If the key was present, it should be at currNode
