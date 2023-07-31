@@ -184,35 +184,22 @@ CASE 2: If the key is somewhere other than at head
 			prev = currentNode;
 			currentNode = currentNode.next;
 		}
+
+		//if the key was present, it should be at currentNode
+		//therefore the currentNode shall not be null
+		if (currentNode != null) {
+			//since the key is at currentNode, unlink currentNode from linked list
+			prev.next = currentNode.next;
+			System.out.println(key + " found and deleted");
+		}
 ```
-```
-// If the key was present, it should be at currNode
-```
+**CASE 3**: The key is not present
 
 ```
-// Therefore the currNode shall not be null
-if (currNode != null) {
-// Since the key is at currNode
-// Unlink currNode from linked list
-prev.next = currNode.next;
-```
-```
-// Display the message
-System.out.println(key + " found and deleted");
-}
-```
-```
-//
-// CASE 3: The key is not present
-//
-```
-```
-// If key was not present in linked list
-// currNode should be null
-if (currNode == null) {
-// Display the message
-System.out.println(key + " not found");
-}
+//if key was not present in linked list currentNode should be null
+		if (currentNode == null ) {
+			System.out.println(key + " not found");
+		}
 ```
 ```
 // return the List
